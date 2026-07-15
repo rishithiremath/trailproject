@@ -1,6 +1,7 @@
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollBackground3D from './components/ScrollBackground3D';
 import Hero from './sections/Hero';
 import Services from './sections/Services';
 import HowItWorks from './sections/HowItWorks';
@@ -13,16 +14,19 @@ function App() {
   return (
     <>
       <Loader />
-      <div className="min-h-screen bg-[#070612]">
-        <Navbar />
-        <Hero />
-        <Services />
-        <HowItWorks />
-        <Stats />
-        <Pricing />
-        <Testimonials />
-        <FAQ />
-        <Footer />
+      <div className="relative min-h-screen bg-[#070612] text-white overflow-hidden">
+        <ScrollBackground3D />
+        <div className="relative z-10">
+          <Navbar />
+          <Hero />
+          <Services />
+          <HowItWorks />
+          <Stats />
+          <Pricing />
+          <Testimonials />
+          <FAQ />
+          <Footer />
+        </div>
       </div>
     </>
   );
